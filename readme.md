@@ -8,7 +8,7 @@
     c) Terraform plan --> To Check what actions are getting executed like a dryrun
     d) Terraform apply --> To provision our resources on cloud provider
 
-# 4. After Successful Prompt Message connect with the our node
+# 4. After Successful Prompt Message connect with our node
 
 
 # 5. Connect to Cluster  
@@ -27,7 +27,8 @@
 
 
 (If Kubectl not worked then follow step 6 (For Amazon Linux 2))
-# 6. (a) Download the kubectl binary using curl:
+# 6. Download the kubectl binary:
+        (a) Download the kubectl binary using curl:
         sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
         (b) Change the permission:
             sudo chmod +x kubectl
