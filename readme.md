@@ -40,5 +40,5 @@
             kubectl get nodes
 
 
-*** NOTE :- If ec2 instance node unable to connect then allow ssh in eks security group ***
+# *** NOTE :- If ec2 instance node unable to connect then allow ssh in eks security group ***
     
