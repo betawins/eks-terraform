@@ -16,16 +16,17 @@ variable "cluster_version" {
 variable "vpc_id" {
   description = "ID of the VPC"
   type        = string
-  default     = "vpc-078adf04201af1076"  # Replace with your VPC ID
+  default     = "vpc-00e43bf8b75a106d9"  # Replace with your VPC ID
 }
 
 variable "subnet_ids" {
   description = "List of subnet IDs"
   type        = list(string)
   default     = [
-    "subnet-0c8fd418db266da29",
-    "subnet-0aec3bd60c4eebfa1",
-    "subnet-0125ccbab90eb7efa"
+    "subnet-0200ed7779a436e82",
+    "subnet-00ae2ec93154f294f",
+    "subnet-006ab7cf80898c087",
+    "subnet-0956aa532ab87e8d2"
   ]  # Replace with your subnet IDs
 }
 
@@ -36,7 +37,7 @@ variable "eks_managed_node_groups" {
     eks_nodes = {
     min_size     = 1
     max_size     = 2
-    desired_size = 2
+    desired_size = 1
 
     instance_types = ["t2.medium"]
   }
@@ -47,10 +48,10 @@ variable "eks_managed_node_group_defaults" {
   description = "Map of EKS managed node group default configurations"
   type        = any
   default     = {  
-    nxpm-cloud-eks-worker = {
+    eks_nodes_worker = {
     min_size     = 1
     max_size     = 2
-    desired_size = 2
+    desired_size = 1
 
     instance_types = ["t2.medium"]
   }}
